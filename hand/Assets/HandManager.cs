@@ -10,7 +10,7 @@ public class HandManager : MonoBehaviour
     public static HandManager Instance;
 
     private UdpClient client;
-    public Vector3[] handPositions = new Vector3[21];
+    public List<Vector3[]> hands = new List<Vector3[]>();
     public bool hasNewData = false;
 
     [Serializable]
@@ -37,22 +37,31 @@ public class HandManager : MonoBehaviour
 
         try
         {
-            var landmarks = JsonHelper2D.Parse(json);
-            if (landmarks.Count == 21)
+            var handsRaw = JsonHelperMulti.ParseMultiHand(json);
+            hands.Clear();
+
+            foreach (var hand in handsRaw)
             {
-                for (int i = 0; i < 21; i++)
+                if (hand.Count == 21)
                 {
-                    handPositions[i] = new Vector3(
-                        (landmarks[i].x - 0.5f) * 12f,
-                        -(landmarks[i].y - 0.5f) * 12f + 2f,
-                        -landmarks[i].z * 12f);
+                    Vector3[] handPositions = new Vector3[21];
+                    for (int i = 0; i < 21; i++)
+                    {
+                        handPositions[i] = new Vector3(
+                            -(hand[i].x - 0.5f) * 12f,
+                            -(hand[i].y - 0.5f) * 12f + 2f,
+                            -hand[i].z * 12f
+                        );
+                    }
+                    hands.Add(handPositions);
                 }
-                hasNewData = true;
             }
+
+            if (hands.Count > 0) hasNewData = true;
         }
         catch (Exception e)
         {
-            Debug.LogWarning("❌ Failed to parse single-hand: " + e.Message);
+            Debug.LogWarning("❌ Failed to parse multi-hand: " + e.Message);
         }
 
         client.BeginReceive(OnDataReceived, null);

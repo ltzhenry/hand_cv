@@ -2166,7 +2166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 957909493}
-  - component: {fileID: 957909492}
+  - component: {fileID: 957909494}
   m_Layer: 0
   m_Name: Lefthand
   m_TagString: Untagged
@@ -2174,40 +2174,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &957909492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957909491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f8c914f1ad334660bc0652fff8b1087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jointSpheres:
-  - {fileID: 261604207}
-  - {fileID: 1275139661}
-  - {fileID: 1262367340}
-  - {fileID: 440328933}
-  - {fileID: 22565291}
-  - {fileID: 324177235}
-  - {fileID: 1850208988}
-  - {fileID: 1531446971}
-  - {fileID: 1168832068}
-  - {fileID: 779772493}
-  - {fileID: 894442827}
-  - {fileID: 1834906702}
-  - {fileID: 703093372}
-  - {fileID: 217245796}
-  - {fileID: 1858519564}
-  - {fileID: 591198662}
-  - {fileID: 2136693898}
-  - {fileID: 27027793}
-  - {fileID: 2083926069}
-  - {fileID: 1773576630}
-  - {fileID: 735751268}
 --- !u!4 &957909493
 Transform:
   m_ObjectHideFlags: 0
@@ -2244,6 +2210,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &957909494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957909491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650ab04f3c8734edab829ec03b28b7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jointSpheres:
+  - {fileID: 261604207}
+  - {fileID: 1275139661}
+  - {fileID: 1262367340}
+  - {fileID: 440328933}
+  - {fileID: 22565291}
+  - {fileID: 324177235}
+  - {fileID: 1850208988}
+  - {fileID: 1531446971}
+  - {fileID: 1168832068}
+  - {fileID: 779772493}
+  - {fileID: 894442827}
+  - {fileID: 1834906702}
+  - {fileID: 703093372}
+  - {fileID: 217245796}
+  - {fileID: 1858519564}
+  - {fileID: 591198662}
+  - {fileID: 2136693898}
+  - {fileID: 27027793}
+  - {fileID: 2083926069}
+  - {fileID: 1773576630}
+  - {fileID: 735751268}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3879,28 +3879,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f8c914f1ad334660bc0652fff8b1087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jointSpheres:
-  - {fileID: 1774199752}
-  - {fileID: 2092146542}
-  - {fileID: 1561426803}
-  - {fileID: 1430715156}
-  - {fileID: 2056121717}
-  - {fileID: 178611395}
-  - {fileID: 351503770}
-  - {fileID: 1531872605}
-  - {fileID: 517849266}
-  - {fileID: 1297260}
-  - {fileID: 771510727}
-  - {fileID: 2094477348}
-  - {fileID: 2043474839}
-  - {fileID: 1240241609}
-  - {fileID: 446266477}
-  - {fileID: 1166541512}
-  - {fileID: 1885867788}
-  - {fileID: 1862763563}
-  - {fileID: 554682428}
-  - {fileID: 941731487}
-  - {fileID: 344030769}
 --- !u!4 &1882705466
 Transform:
   m_ObjectHideFlags: 0
@@ -3909,7 +3887,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882705464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.841, y: 0, z: -1.966}
+  m_LocalPosition: {x: 7.88, y: 0, z: 0.89}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
