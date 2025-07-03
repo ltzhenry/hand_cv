@@ -27,6 +27,11 @@ public class HandRenderer : MonoBehaviour
             {
                 spheres[i] = Instantiate(jointSpherePrefab);
                 spheres[i].name = $"Hand{handSpheres.Count}_Joint{i}";
+                var rb = spheres[i].AddComponent<Rigidbody>();
+                rb.useGravity = false;
+                rb.isKinematic = true;
+
+                spheres[i].AddComponent<SphereCollider>();
             }
             handSpheres.Add(spheres);
 

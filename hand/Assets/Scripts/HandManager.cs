@@ -48,8 +48,8 @@ public class HandManager : MonoBehaviour
                     for (int i = 0; i < 21; i++)
                     {
                         handPositions[i] = new Vector3(
-                            -(hand[i].x - 0.5f) * 12f,
-                            -(hand[i].y - 0.5f) * 12f + 2f,
+                            (hand[i].x - 0.5f) * 12f, //左右
+                            -(hand[i].y - 0.5f) * 12f + 2f, //上下
                             -hand[i].z * 12f
                         );
                     }
